@@ -81,7 +81,7 @@ to extract data (in parallel, processing 24 files at a time) from the Gigaword c
 at `./data/gigaword_eng_5/` and write the flattened files + combined output to `tmp/`. 
 
 Simplified2tranditional Chinese Conversion:
-follow conversion instrction from (opencc-python)[https://github.com/yichen0831/opencc-python]
+follow conversion instrction from [opencc-python](https://github.com/yichen0831/opencc-python)
 ``` python
 from opencc import OpenCC
 cc = OpenCC('s2t')  # convert from Simplified Chinese to Traditional Chinese
