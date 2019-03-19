@@ -1,7 +1,11 @@
 # Preprocessing the Chinese Gigaword Datset
 
 The scripts in this repository dump the text of the Gigaword dataset into preporcessed headline and paragraph files, for use 
-with summarization tasks. The pipeline of the scirpt is (1) merging data in the corpus, (2) tokenizing words by jieba, (3) convering simplified chinese into tranditional chinese (or you can do the inverse translation).
+with summarization tasks. 
+The pipeline of the scirpt is 
+1.  Merge data in the corpus
+2.  Tokenize words by jieba
+3.  Conver simplified chinese into tranditional chinese (or you can do the inverse translation)
 
 See my [blog post on flattening the Gigaword corpus](https://blog.nelsonliu.me/2017/09/23/flattening-the-gigaword-corpus/) for 
 more information about how the code in this repo works.
