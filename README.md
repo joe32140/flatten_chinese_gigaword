@@ -80,7 +80,7 @@ For example, you can run:
 to extract data (in parallel, processing 24 files at a time) from the Gigaword corpus 
 at `./data/gigaword_eng_5/` and write the flattened files + combined output to `tmp/`. 
 
-Simplified2tranditional Chinese Conversion:
+## Simplified-to-tranditional Chinese Conversion:
 follow conversion instrction from [opencc-python](https://github.com/yichen0831/opencc-python)
 ``` python
 from opencc import OpenCC
