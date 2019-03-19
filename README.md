@@ -60,12 +60,14 @@ Gigaword data files to [`flatten_one_gigaword.py`](./flatten_one_gigaword.py) an
 
 [`flatten_all_gigaword.sh`](./flatten_all_gigaword.sh) takes in three positional arguments:
 
-1.  The path to the Gigaword directory, with all of the data files unzipped.
+1.  The path to the Gigaword directory (unzipped files by uncomment unzip script in ([`flatten_all_gigaword.sh`](./flatten_all_gigaword.sh).
 
 2.  A directory to write the flattened files to and the final combined output. 
     It will be created if it does not exist.
 
 3. The number of files to process at once.
+
+4. splited files will be removed after merging to one file
 
 For example, you can run:
 
