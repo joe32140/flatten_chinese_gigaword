@@ -81,14 +81,10 @@ to extract data (in parallel, processing 24 files at a time) from the Gigaword c
 at `./data/gigaword_eng_5/` and write the flattened files + combined output to `tmp/`. 
 
 ## Simplified-to-tranditional Chinese Conversion:
-follow conversion instrction from [opencc-python](https://github.com/yichen0831/opencc-python)
-``` python
-from opencc import OpenCC
-cc = OpenCC('s2t')  # convert from Simplified Chinese to Traditional Chinese
-# can also set conversion by calling set_conversion
-# cc.set_conversion('s2tw')
-to_convert = '开放中文转换'
-converted = cc.convert(to_convert)
+follow conversion instrction from [opencc-python](https://github.com/yichen0831/opencc-python) and modify the script ([`flatten_all_gigaword.sh`](./flatten_all_gigaword.sh)
+``` bash
+#from simplified chinese to tranditional chinese
+${GIGAWORDDIR}/data/*/*.gz | parallel --gnu --progress -j ${NUMJOBS} python -m opencc -i \{\} -o \{\} -c MODIFY_HERE
 ```
 ### Command Line
 
