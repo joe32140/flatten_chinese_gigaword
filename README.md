@@ -48,7 +48,7 @@ needed to run the code in this package.
 
 5.  Install the required SpaCy data pack.
     ```
-    python -m spacy download en
+    python -m spacy link jieba zh
     ```
     
 ## Usage

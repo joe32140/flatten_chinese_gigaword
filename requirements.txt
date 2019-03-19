@@ -1,3 +1,5 @@
 argparse
 beautifulsoup4
 spacy
+jieba
+opencc-python-reimplemented

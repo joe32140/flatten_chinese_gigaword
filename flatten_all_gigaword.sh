@@ -8,9 +8,15 @@ export OUTPUTDIR=$2
 # The number of jobs to run at once
 export NUMJOBS=$3
 
+#echo "Unziping files..."
+#find ${GIGAWORDDIR}/data/*/*.gz | parallel --gnu --progress -j ${NUMJOBS} gzip -d  \{\}
+
 echo "Flattening Gigaword with ${NUMJOBS} processes..."
 mkdir -p $OUTPUTDIR
 find ${GIGAWORDDIR}/data/*/* | parallel --gnu --progress -j ${NUMJOBS} python flatten_one_gigaword.py \
                                         --gigaword-path \{\} --output-dir ${OUTPUTDIR}
 echo "Combining the flattened files into one..."
-cat ${OUTPUTDIR}/*.flat > ${OUTPUTDIR}/flattened_gigaword.txt
+cat ${OUTPUTDIR}/*.flat > ${OUTPUTDIR}/flattened_paragraph_gigaword.txt
+cat ${OUTPUTDIR}/*.headline > ${OUTPUTDIR}/flattened_heaadline_gigaword.txt
+echo "Removing tmp files..."
+rm ${OUTPUTDIR}/*.flat ${OUTPUTDIR}/*.headline
