@@ -84,7 +84,7 @@ at `./data/gigaword_eng_5/` and write the flattened files + combined output to `
 follow conversion instrction from [opencc-python](https://github.com/yichen0831/opencc-python) and modify the `-c` argument in  [`flatten_all_gigaword.sh`](./flatten_all_gigaword.sh)
 ``` bash
 #from simplified chinese to tranditional chinese
-${GIGAWORDDIR}/data/*/*.gz | parallel --gnu --progress -j ${NUMJOBS} python -m opencc -i \{\} -o \{\} -c MODIFY_HERE
+${GIGAWORDDIR}/data/*/* | parallel --gnu --progress -j ${NUMJOBS} python -m opencc -i \{\} -o \{\} -c MODIFY_HERE
 ```
 ### Command Line
 
