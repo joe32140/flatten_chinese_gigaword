@@ -51,7 +51,7 @@ needed to run the code in this package.
     pip install -r requirements.txt
     ```
 
-5.  Install the required SpaCy data pack.
+5.  Link jiebe data pack to SpaCy.
     ```
     python -m spacy link jieba zh
     ```
@@ -80,8 +80,8 @@ For example, you can run:
 to extract data (in parallel, processing 24 files at a time) from the Gigaword corpus 
 at `./data/gigaword_eng_5/` and write the flattened files + combined output to `tmp/`. 
 
-## Simplified-to-tranditional Chinese Conversion:
-follow conversion instrction from [opencc-python](https://github.com/yichen0831/opencc-python) and modify the script ([`flatten_all_gigaword.sh`](./flatten_all_gigaword.sh)
+## Conversion Options:
+follow conversion instrction from [opencc-python](https://github.com/yichen0831/opencc-python) and modify the `-c` argument in  [`flatten_all_gigaword.sh`](./flatten_all_gigaword.sh)
 ``` bash
 #from simplified chinese to tranditional chinese
 ${GIGAWORDDIR}/data/*/*.gz | parallel --gnu --progress -j ${NUMJOBS} python -m opencc -i \{\} -o \{\} -c MODIFY_HERE
