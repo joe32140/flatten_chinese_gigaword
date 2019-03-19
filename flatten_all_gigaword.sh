@@ -17,7 +17,7 @@ find ${GIGAWORDDIR}/data/*/* | parallel --gnu --progress -j ${NUMJOBS} python fl
                                         --gigaword-path \{\} --output-dir ${OUTPUTDIR}
 
 #from simplified chinese to tranditional chinese
-#find ${GIGAWORDDIR}/data/*/*.gz | parallel --gnu --progress -j ${NUMJOBS} python -m opencc -i \{\} -o \{\} -c s2twp
+#find ${GIGAWORDDIR}/data/*/* | parallel --gnu --progress -j ${NUMJOBS} python -m opencc -i \{\} -o \{\} -c s2twp
 
 echo "Combining the flattened files into one..."
 cat ${OUTPUTDIR}/*.flat > ${OUTPUTDIR}/flattened_paragraph_gigaword.txt
